@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Replacement Algorithms</title>
+    <link rel="stylesheet" href="lru.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="../img/logo1.png" />
+  </head>
+  <body>
+    <footer>
+      <a href="../index.html" class="footer">Back Home</a>
+    </footer>
+     <h1 class="section-title">LRU <span> PAGE </span> REPLACEMENT <span> ALGORITHM </span></h1>
+    <div class="main">
+      <div class="left">
+        <div class="inputsection">
+          <div class="frmdiv dd">
+            <label for="noofframes" id="high">Number of Frames: </label>
+            <input type="number" value="4" class="noofframes" class="base" />
+          </div>
+          <div class="algodiv dd">
+            <label for="pagereplacementalgo" id="high">Algorithm: </label>
+            <select name="pagereplacementalgo" id="pra">
+              <option value="LRU" class="base">Least Recently Used(LRU)</option>
+            </select>
+          </div>
+          <div class="refdiv dd">
+            <label for="references" id="high">References: </label>
+            <input
+              type="text"
+              id="references"
+              value="7 0 1 2 0 3 0 4 2 3 0 3 2"
+              class="base"
+            />
+          </div>
+          <div class="btndiv">
+            <button onclick="pushData()">Simulate</button>
+
+            <button onclick="resetform()" class="reset btn">Reset</button>
+            <div class="summarydiv">
+              <label for="Summary" id="high"></label>
+              <input type="hidden" name="Summary" id="Summary" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="solution">
+          <div class="part1"></div>
+          <div class="part2">
+            <h2></h2>
+            <br />
+            <h2></h2>
+          </div>
+          <div class="part3"></div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <script src="lru.js"></script>
+    <div>
+  <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1564522-H44CB1UQ05F022U3/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
+  </div>
+  </body>
+</html>

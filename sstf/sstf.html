@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <div class="home">
+    <a href="../index.html" class="button">Back Home</a>
+  </div>
+</header>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>Disk Scheduling Algorithms Visualization</title>
+
+  <!--CSS and Script linking-->
+  <link rel="stylesheet" href="sstf.css" type="text/css">
+  <link rel="shortcut icon" type="image/png" href="../img/logo1.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+</head>
+<header>
+
+  <body>
+    <h1 class="section-title">DISK <span> SCHEDULING</span> ALGORITHM </h1>
+    <div class="container">
+
+      <header>
+        <div class="navbar-brand">
+
+      </header>
+      <br>
+      <br>
+      </ul><!-- #nav-list -->
+    </div><!-- .collapse .navbar-collapse -->
+    </div><!-- .container -->
+    </nav><!-- #header-nav -->
+</header>
+
+<div class="main">
+  <div class="container1">
+    <script>
+      function admSelectCheck(nameSelect) {
+        console.log(nameSelect);
+        if (nameSelect) {
+          x3 = document.getElementById("o3").value;
+          x4 = document.getElementById("o4").value;
+          x5 = document.getElementById("o5").value;
+          x6 = document.getElementById("o6").value;
+          x7 = document.getElementById("o7").value;
+          if (x3 == nameSelect.value || x4 == nameSelect.value || x5 == nameSelect.value || x6 == nameSelect.value || x7 == nameSelect.value) {
+            document.getElementById("admDivCheck").style.display = "block";
+          }
+          else {
+            document.getElementById("admDivCheck").style.display = "none";
+          }
+        }
+        else {
+          document.getElementById("admDivCheck").style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="left transform">
+      <form name="myForm">
+        <fieldset>
+          <div class="row2">
+            <div class="form-group">
+              <form>
+                <label for="exampleSelect1">Algorithm </label>
+                <select class="form-control" id="algorithm">
+                  <option id="o2" value="sstf" name="algo">SSTF</option>
+                </select>
+            </div>
+          </div>
+          <div class="row2">
+
+            <div class="form-group">
+
+              <label class="col-form-label" for="inputDefault">Sequence of Tracks</label>
+              <input class="form-control" id="bitstream-input" name="bitstream" value="100 23 75 120 90 9" type="text"
+                size="35">
+            </div>
+          </div>
+          <div class="row2">
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Head Position</label>
+              <input class="form-control" id="initial-input" name="intial" type="text" size="5" value="75">
+            </div>
+
+          </div>
+        </fieldset>
+      </form>
+      <button type="submit" id="plot-button" class="btn"
+        onclick="getBitStreamAndPlot(event, document.getElementById('bitstream-input').value, document.getElementById('initial-input').value, document.getElementById('algorithm').value)"
+        style=" color: black;">
+        &nbsp;Simulate&nbsp;</button>
+      <button onclick="resetform()" class="btn" id="rst_btn" style=" color: black;">&nbsp;Reset&nbsp;</button>
+        <button type="submit" class="btn" style="color: black;">Submit</button>
+    </div>
+    </form>
+    <div class="right">
+      <div id="am_alg_name" class="section-title"></div>
+      <div id="cl-seek"></div>
+      <div id="am_alg_seek"></div>
+      <canvas id="canvas" width=100 height=300></canvas>
+    </div>
+
+  </div>
+
+  <div id="grph" class="container2">
+    <div id="plt_alg_name" class="section-title"></div><br>
+    <div id="graph_area"></div>
+    <div id="plt_alg_seek"></div><br>
+    <div id="cal-seek"></div>
+  </div>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="sstf.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div>
+  <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1564522-H44CB1UQ05F022U3/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
+  </div>
+</body>
+
+</html>

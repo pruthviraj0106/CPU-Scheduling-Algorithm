@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewportl-scale=1">
+    <meta charset="utf-8">
+
+    <title>Producer Consumer Algorithm</title>
+    
+    <!--CSS and Script linking-->
+    <link rel="stylesheet" href="aboutpc.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../img/logo1.png" />
+  </head>
+
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+          <div class="navbar-brand">
+            <h1 class="section-title">
+               PRODUCER<span> CONSUMER </span>ALGORITHM
+            </h1>
+          </div>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+    
+    <div class="pcinfo">
+      <img src="../img/abtpc.png" alt="pc" style="float: right; margin-right: 40px; width: 300px; height: 350px;">
+      <p class="hd"><b>What is Producer Consumer scheduling Algorithm?</b></p>
+      
+      <div id="intro">
+        The Producer-Consumer scheduling algorithm is a concurrency problem that involves two types of threads: producers and consumers. Producers generate data and put it into a shared buffer or queue, while consumers retrieve data from the buffer and process it.
+
+        The goal of the Producer-Consumer algorithm is to ensure that producers do not produce data if the buffer is full, and that consumers do not consume data if the buffer is empty. This is achieved through synchronization mechanisms such as locks, semaphores, or monitors.
+        
+        There are several variations of the Producer-Consumer algorithm, each with its own synchronization mechanisms and strategies for managing the buffer. One common approach is to use a circular buffer with two pointers: a read pointer and a write pointer. The write pointer is advanced by the producer when it adds data to the buffer, and the read pointer is advanced by the consumer when it retrieves data from the buffer.
+      </div>
+
+      
+      <p class="hd"><b>Why do we need Producer Consumer Algorithm?</b></p>
+
+      <div id="why">
+        <b>Producer Consumer is important because:</b>
+        <ul>
+          <li>The producer-consumer scheduling algorithm is used in situations where there is a need to coordinate the work of two or more processes that are working concurrently. The algorithm is designed to ensure that the producer process and the consumer process work together in a synchronized manner, without one process overwhelming the other or causing delays.</li>
+          <li> It is used to ensure that the producer process does not overwhelm the consumer process with too much data to process, while also ensuring that the consumer process does not starve for data.</li>
+          <li>It is used to coordinate access to this shared resource, ensuring that producers and consumers do not interfere with each other while accessing the shared buffer.</li>
+        </ul>
+
+      </div>
+
+      <p class="hd"><b>Various Producer Consumer Scheduling Algorithms</b></p>
+
+      <div class="cont">
+        <div>
+        <h2 class=" heady">Semaphore-based Producer-Consumer Algorithm:</h2></a>
+          <p class="description">In this algorithm, a semaphore is used to control access to a shared buffer between a producer and a consumer. The producer can produce items and add them to the buffer, and the consumer can consume items from the buffer. The semaphore is used to ensure that only one process can access the buffer at a time. When the buffer is empty, the consumer blocks until the producer adds an item to the buffer. Similarly, when the buffer is full, the producer blocks until the consumer consumes an item from the buffer.</p>
+        </div>
+        <div>
+         <h2 class=" heady">Monitor-based Producer-Consumer Algorithm:</h2></a>
+          <p class="description">In this algorithm, a monitor is used to control access to a shared buffer. The monitor ensures that only one process can access the buffer at a time. The producer can produce items and add them to the buffer, and the consumer can consume items from the buffer. When the buffer is empty, the consumer waits until the producer adds an item to the buffer. Similarly, when the buffer is full, the producer waits until the consumer consumes an item from the buffer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+        <a href="producer_consumer.html" class="btn">Run Algorithm</a>
+        <a href="../index.html" class="btn">Back Home</a>
+      </div>
+<div>
+  <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1564522-H44CB1UQ05F022U3/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
+  </div>
+  </body>
+
+</html>

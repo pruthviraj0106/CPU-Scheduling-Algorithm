@@ -1,0 +1,210 @@
+a {
+  display: inline-block;
+  padding: 10px 10px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 15px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+  text-decoration: none;
+
+}
+
+a:hover {
+
+  color: white;
+  background-color: crimson;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url(../img/back.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+h1 {
+  font-size: 4rem;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.tb {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  top: 2vh;
+  border: 2px solid rgb(16, 15, 15);
+  border-collapse: collapse;
+  padding: 16px;
+  border-spacing: 19px;
+  font-size: medium;
+  left: 25%;
+  font-family: 'Times New Roman', Times, serif;
+  color: red;
+  margin-left: 50;
+  margin-right: auto;
+  right: -30%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+}
+
+.t {
+  padding: 12px;
+  background-color: rgba(249, 252, 251, 0.938);
+  border: 2px solid rgb(220, 39, 39);
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 15em;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+  border-collapse: collapse;
+  border-radius: 10px;
+  padding: 10px;
+  border-spacing: 19px;
+  font-size: larger;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+}
+
+.foot {
+  display: inline-block;
+  left: 32%;
+  position: relative;
+  top: 5em;
+  color: black;
+  border-spacing: 2px;
+}
+
+#bs {
+  padding: 12px;
+  background-color: white;
+  border: 2px solid rgb(220, 39, 39);
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 15em;
+}
+
+#pro {
+  padding: 12px;
+  background-color: white;
+  border: 2px solid rgb(220, 39, 39);
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 15em;
+}
+
+#con {
+  padding: 12px;
+  background-color: white;
+  border: 2px solid rgb(220, 39, 39);
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 15em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 10px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 15px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+
+}
+
+.btn:hover {
+
+  color: white;
+  background-color: crimson;
+}
+
+@media all and (max-width:30em) {
+  .btn {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+.optable {
+  visibility: hidden;
+  display: inline-block;
+  background-color: white;
+  color: red;
+  border: 2px solid rgb(16, 15, 15);
+  border-collapse: collapse;
+  top: 13vh;
+  padding: 4px;
+  text-align: center;
+  border-spacing: 15px;
+  font-size: larger;
+  margin: 10% 15%;
+  left: -13%;
+}
+
+
+.show {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  top: 2vh;
+  border: 2px solid rgb(16, 15, 15);
+  border-collapse: collapse;
+  padding: 20px;
+  border-spacing: 19px;
+  font-size: larger;
+  left: 25%;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 43rem;
+  height: auto;
+  right: -30%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: crimson;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>CPU Scheduling Algorithms</title>
+    
+    <!--CSS and Script linking-->
+    <link rel="stylesheet" href="abt.css">   
+    <link rel="shortcut icon" type="image/png" href="../img/logo1.png" />
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+  
+            <div class="navbar-brand">
+              <h1 class="section-title">
+                SRTN <span>CPU</span> SCHEDULING <span> ALGORITHM </span>
+              </h1>
+            </div>
+  
+           
+          </div>
+    
+    <div class="srtninfo">
+      <p class="hd"><b>What is CPU scheduling Algorithm?</b></p>
+      
+      <div id="intro">
+        Shortest Remaining Time Next (SRTN) is a CPU scheduling algorithm that is similar to Shortest Job First (SJF) algorithm. The key difference between SRTN and SJF is that SRTN is preemptive while SJF is non-preemptive. In SRTN, the processor switches from one process to another based on their remaining burst time, whereas in SJF, the processor switches from one process to another based on their arrival time and total burst time.
+
+In SRTN, the operating system selects the process with the shortest remaining burst time and allocates the CPU to that process. If a new process arrives with a shorter burst time than the currently executing process, the operating system preempts the currently executing process and allocates the CPU to the new process. This is done to minimize the average waiting time and turnaround time of the processes.
+
+SRTN can be more efficient than SJF in situations where the process arrival times are not known in advance, and the burst times are highly variable. In such cases, SJF may cause some processes to wait for a long time, leading to high average waiting time and turnaround time. However, SRTN can lead to starvation of longer processes if there are a large number of short processes. In such cases, the longer processes may never get a chance to execute, leading to high average waiting time and turnaround time for those processes.
+
+One of the main advantages of SRTN is that it is a preemptive algorithm, which means that it can respond quickly to new processes that require the CPU. This can help to minimize the response time of interactive applications, which require quick responses from the CPU. Additionally, SRTN can help to minimize the average waiting time and turnaround time of processes, which can help to improve the overall performance of the system.
+
+However, SRTN can be complex to implement, as it requires the operating system to keep track of the remaining burst time of each process and to preempt processes when necessary. Additionally, SRTN can lead to starvation of longer processes if there are a large number of short processes. This can result in high average waiting time and turnaround time for those processes, which can be a significant disadvantage of the algorithm.
+
+In conclusion, SRTN is a CPU scheduling algorithm that selects the process with the shortest remaining burst time and allocates the CPU to that process. It is a preemptive algorithm that can respond quickly to new processes and help to minimize the average waiting time and turnaround time of processes. However, it can be complex to implement and can lead to starvation of longer processes if there are a large number of short processes.
+<br><br>
+<br><img src="../img/abtsrtn.jpg" alt="srtn" style="float: right; margin-right: 40px; width: 350px; height: 350px;">
+<p class="hd"><b>Types of CPU Scheduling</b></p>
+<br>
+
+        There are two main types of CPU scheduling: 
+        
+        <ol>
+          <div class="container">
+            
+            <p><li><b>Preemptive : </b></li><br>
+              In a preemptive scheduling system, the operating system may interrupt a process that is currently using the CPU in order to allocate it to another process. This type of scheduling is generally more efficient, as it allows the operating system to make better use of the CPU by allocating it to the process that needs it the most.<br></p>
+          </div>
+      
+
+            
+            <br><li><b>Non-preemptive : </b></li><br>
+           In a non-preemptive scheduling system, once a process has been allocated the CPU, it will keep it until it either voluntarily relinquishes it, or it blocks (e.g. waiting for I/O). This type of scheduling is generally less efficient, as it may result in long wait times for processes that are blocked, and there is no way to interrupt a process that is using the CPU.
+        </ol> 
+      </div>
+<br>
+      
+      <p class="hd"><b>Advantages of Shortest Remaining Time Next algorithm</b></p>
+
+      <div id="why">
+        <ul>
+          <li>
+            It is optimal in terms of minimizing average waiting time and turnaround time, as it prioritizes processes with the shortest remaining burst time.
+          </li>
+          <li>It works well in systems where there are many short processes, as they are executed quickly, reducing their waiting and turnaround times.
+            </li>
+            <li>It can improve system throughput, as shorter processes are completed faster, freeing up the CPU for other processes.</li>
+        </ul>
+        
+        
+
+      </div>
+      <p class="hd"><b>Disadvantages of Shortest Remaining Time Next Algorithm</b></p>
+
+      <div id="why">
+        <ul>
+          <li>It requires knowledge of the burst time of each process, which may not be available in some systems.</li>
+            <li>
+            It can suffer from starvation, where long processes with a high burst time may never get a chance to execute if shorter processes keep arriving.</li>
+            <li>It can cause frequent context switches, which can result in overhead and decrease overall system performance.</li>
+        </ul>
+        
+        
+      </div>
+      <br><br>
+      <div class="foot">
+        <a href="SRTNALGO.html" class="btn">Run Algorithm</a>
+        <a href="../index.html" class="btn">Back Home</a>
+      </div>
+      <div>
+  <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1564522-H44CB1UQ05F022U3/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
+  </div>
+  </body>
+
+</html>
